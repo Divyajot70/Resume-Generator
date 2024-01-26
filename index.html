@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume/CV Generator- by Divyajot</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<header><h1 style="text-align: center; color: blue;"><u>RESUME/CV GENERATOR</u></h1></header>
+<body>
+    <div id="cv-form">
+    <div class="box">
+    
+
+    <div class="personalInfo">
+        <h2 ><b>Personal Information</b></h2>
+        <label for="name"><b>Full Name</label></b> <br>
+        <input type="text" id="nameField"> <br> <br>
+        <label for="phone" ><b>Contact Number</b></label> <br>
+        <input type="tel" id="contactField"> <br><br>
+        <label for="mail"><b>e-mail id</b></label> <br>
+        <input type="text" id="emailField"> <br><br>
+        <label for="summary" style="font-weight: 40px;"><b>Summary</b></label> <br>
+        <textarea name="summary" id="summaryField" cols="30" rows="10"></textarea> <br>
+
+       <h3 ><b>Important Links</b></h3>
+       <label for="linkedIn" ><b>LinkedIn</b></label> <br>
+       <input type="text" id="linkedField" style="margin-right: 20px;"> <br><br>
+       <label for="leetcode" ><b>Coding Platform</b></label> <br>
+       <input type="text" id="codingField" placeholder="eg. LeetCode, CodeChef.."> <br> <br>
+       <label for="GitHub" ><b>GitHub</b></label> <br>
+        <input type="text" id="gitField"> <br> <br>
+    </div>
+    <div class="professionalInfo">
+        <h2 >Professional Information</h2>
+        <label for="skills"><b>Skills</b></label><br>
+        <textarea name="skills" id="skillsField" cols="30" rows="7"></textarea> 
+        <br> <br>
+        <label for="qualifications"><b>Academic Qualifications</b></label><br>
+        <div id="aq"><textarea name="qualifications" id="qualifications" cols="30" rows="10"
+             class="form-control eqField"></textarea>
+        <br>
+        <div id="aqAddButton"><button onclick="addNewAQField()">Add more</button></div></div> <br>
+        <br><label for="Experience" style="font-weight: 400px; "><b>Work Experience</b></label><br>
+        <div id="we"><textarea name="Experience" id="Experience" cols="30" rows="8"
+             class="form-control weField"></textarea><br>
+        <div id="weAddButton"><button onclick="addNewWEField()">Add More</button></div></div>
+    </div>
+</div><div id="button1"><button onclick="generateCV()" id="generation">Generate Resume</button></div>
+</div>
+
+    <div id="cv-template">
+        <div id="top">
+            <h1 id="nameT">Divyajot Sapra</h1>
+            <h3><span id="countryT">India</span>|<span id="contactT"> +91 0000000000</span>|
+                <span id="emailT"> example@gmail.com</span> |
+                 <a href="" id="linkedT">LinkedIn</a></h3>
+                 <h3><a href="" id="codingT">Coding platform</a> |
+                     <a href="" id="gitT">GitHub</a></h3>
+        </div>
+        <h3  >SUMMARY</h3>
+        <hr>
+        <div class="info">
+            <p id="summaryT">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                 Cupiditate obcaecati ullam omnis iusto debitis provident ipsam,
+                  doloremque ducimus!</p>
+        </div>
+        <!-- Academic Qualification -->
+        <h3>EDUCATION</h3>
+        <hr>
+        <div class="info">
+            <ul id="aqT">
+                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima, expedita?</li>
+                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima, expedita?</li>
+                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima, expedita?</li>
+            </ul>
+        </div> 
+        <!-- work experience -->
+        <h3>WORK EXPERIENCE</h3>
+        <hr>
+        <div class="info">
+            <ul id="weT">
+                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima, expedita?</li>
+                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima, expedita?</li>
+                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima, expedita?</li>
+            </ul>
+        </div>
+        <!-- skills -->
+        <h3>SKILLS</h3>
+        <hr>
+        <div class="info">
+            <ul id="skillsT">
+                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima, expedita?</li>
+                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima, expedita?</li>
+                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima, expedita?</li>
+            </ul>
+        </div>
+        <div class="lastButton"><button onclick="printCV()" id="print-button">PRINT RESUME</button></div>
+    </div>
+
+    <script src="script.js" ></script>
+</body>
+</html>
